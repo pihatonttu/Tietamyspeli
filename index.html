@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyselypeli</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div id="player-points" class="hidden">
+            <h2>Pisteet:</h2>
+            <div id="player-points-container"></div>
+        </div>
+        <h2 id="player-name" class="hidden"></h2>
+
+        <!-- Starting screen -->
+        <div id="start-screen">
+            <h2>Valitse pelaajien määrä (2-4):</h2>
+            <input type="number" id="player-count" min="2" max="4">
+            <button id="submit-player-count" class="primary-button">Aloita</button>
+        </div>
+
+        <!-- Player names input screen -->
+        <div id="player-names-screen" class="hidden">
+            <h2>Syötä pelaajien nimet:</h2>
+            <div id="player-names-container"></div>
+            <button id="start-game" class="primary-button">Aloita peli</button>
+        </div>
+
+        <!-- Category selection screen -->
+        <div id="category-selection" class="selection-container hidden">
+            <h2>Valitse kategoria:</h2>
+            <div id="category-buttons" class="two-by-two-container"></div>
+            <!-- <button id="end-game-button" class="primary-button">Lopeta peli</button> -->
+        </div>
+
+        <!-- Theme selection screen -->
+        <div id="theme-selection" class="selection-container hidden">
+            <h2>Valitse teema:</h2>
+            <div id="theme-buttons" class="two-by-two-container"></div>
+            <button id="relinquish-turn" class="primary-button">Luovuta</button>
+        </div>
+
+        <!-- Difficulty selection screen -->
+        <div id="difficulty-selection" class="selection-container hidden">
+            <h2>Valitse vaikeusaste:</h2>
+            <div class="two-by-two-container">
+                <button class="difficulty-button" data-difficulty="easy">1 (Easy)</button>
+                <button class="difficulty-button" data-difficulty="med">2 (Medium)</button>
+                <button class="difficulty-button" data-difficulty="hard">3 (Hard)</button>
+                <button class="difficulty-button" data-difficulty="vhard">4 (Very-Hard)</button>
+            </div>
+        </div>
+
+        <!-- Question display screen -->
+        <div id="question-container" class="hidden">
+            <div id="question" class="question-text">Kysymys tulee tähän</div>
+            <button id="show-answer-button" class="primary-button">Näytä vastaus</button>
+            <div id="answer" class="answer-text hidden"></div>
+            <div id="answer-buttons" class="hidden">
+                <button id="wrong-button" class="primary-button">Vastaus väärin</button>
+                <button id="correct-button" class="primary-button">Vastaus oikein</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

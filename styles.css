@@ -1,0 +1,207 @@
+/* General styles */
+body {
+    background-color: #6c63ff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.quiz-container {
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 1.75rem;
+    color: #333333;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+h2 {
+    font-size: 1.25rem;
+    color: #555555;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+#player-points {
+    font-size: 1.25rem;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+#player-points-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+/* Flexbox layout for tiles */
+.selection-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px; /* Even gap between tiles in both directions */
+}
+
+.two-by-two-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.selection-container button {
+    background-color: #6c63ff;
+    color: #ffffff;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    flex: 1 1 calc(50% - 10px); /* Two tiles per row with consistent spacing */
+    box-sizing: border-box;
+}
+
+.selection-container button:hover {
+    background-color: #5753c9;
+}
+
+/* Add gap to id of player names container */
+#player-names-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.primary-button {
+    background-color: #6c63ff;
+    color: #ffffff;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+#wrong-button {
+    background-color: #ff6b6b;
+}
+
+#correct-button {
+    background-color: #4caf50;
+}
+
+.primary-button:hover {
+    background-color: #5753c9;
+}
+
+#question-container {
+    margin-top: 20px;
+}
+
+.question-text {
+    font-size: 1.25rem;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.answer-text {
+    font-size: 1.5rem; /* Larger font size for emphasis */
+    color: #ff6b6b; /* Distinct color to make it stand out */
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffe6e6; /* Light background to highlight the answer */
+    border-radius: 5px;
+    border: 2px solid #ff6b6b; /* Border to make it stand out even more */
+}
+
+#show-answer-button, #end-game-button, #relinquish-turn {
+    background-color: #ff6b6b !important;
+}
+
+#restart-button {
+    background-color: #4caf50 !important;
+}
+
+.hidden {
+    /* make this override existing display values */
+    display: none !important;
+}
+
+/* Style for start screen to be in column formation */
+#start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+#player-count {
+    width: 60px;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 600px) {
+    .quiz-container {
+        padding: 15px;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .question-text {
+        font-size: 1.1rem;
+    }
+
+    .answer-text {
+        font-size: 1.4rem; /* Slightly smaller on mobile */
+    }
+
+    #show-answer-button, #restart-button {
+        font-size: 1rem;
+        padding: 15px;
+        width: 100%;
+        max-width: 300px;
+        box-sizing: border-box;
+    }
+}
